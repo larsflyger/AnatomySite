@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Mobile Menu Hamburger</title>
         <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -9,6 +9,66 @@
         <link rel="stylesheet" type="text/css" media="all" href="hamburger.css"/>
     </head>
     <body>
+         <style>
+           
+             #header
+             {
+                 background-color: green;
+                 color:white;
+                 text-align:center;
+                 z-index:15;
+                 padding:2px;
+                 
+             }
+            
+             #leftside
+             {
+                 width:400px;
+                 height:1000px;
+                 float:left;
+                 text-align:center;
+                 line-height: 100px;
+                 padding: 30px;
+                 outline-style:solid;
+                 outline-width:1px;
+                 outline-color:black;
+             }
+               #image
+             {
+                 position:absolute;
+                 width:500px;
+                 height:700px;
+                 z-index: 0;
+                 top: 30%;
+                 left: 45%;
+                 padding:50px;
+                 margin: -100px 0 0 -200px;
+                 text-align:center;
+                 align-content:center;
+                 outline-style:solid;
+                 outline-width:1px;
+                 outline-color:black;
+             }
+             #rightside
+             {
+                 text-align:center;
+                 width:400px;
+                 height:1000px;
+                 padding: 30px;
+                 line-height: 100px;
+                 float:right;
+                 outline-style:solid;
+                 outline-width:1px;
+                 outline-color:black;
+             }
+             
+         </style>
+    
+        
+        
+        
+        
+        
         <div id="container">
             <header>
                 <div id="hamburger">
@@ -27,5 +87,21 @@
             <div id="contentLayer"></div>
             <div id="content"></div>
         </div>
+        <div id="leftside">
+            <p> This is the sample text for the left side</p>
+        </div>
+        <div id="image">
+            <img src="humanoutline.jpg" alt="Stickperson" style="width:464px;height:700px; " usemap="#humanmap" >
+            Additional info will pop up in new window on click
+        </div>
+        <map name="humanmap">
+            <area shape="circle" coords="232,50,50" href="stick.png" title="the head, where the thinking do!" alt="Head">
+        </map>
+        <div id="rightside">
+            <p> Additional information</p>
+        </div>
+        
+        
     </body>
+   
 </html>
