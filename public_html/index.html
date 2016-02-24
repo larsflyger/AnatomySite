@@ -76,11 +76,6 @@
              
          </style>
     
-        
-        
-        
-        
-        
         <div id="container">
             <header>
                 <div id="hamburger">
@@ -102,14 +97,14 @@
         <div id="leftside">
             <p>Select Layer</p>
             <form>
-                <button class="button">Skin</button><br>
-                <button class="button">Muscle</button><br>
-                <button class="button">Organs</button><br>
-                <button class="button">Skeleton</button><br>
+                <button class="button" onclick="skin()">Skin</button><br>
+                <button class="button" onclick="muscle()">Muscle</button><br>
+                <button class="button" onclick="organs()">Organs</button><br>
+                <button class="button" onclick="skeleton()">Skeleton</button><br>
             </form> 
         </div>
         <div id="image">
-            <img src="humanoutline.jpg" alt="Stickperson" style="width:464px;height:700px; " usemap="#humanmap" >
+            <img src="humanoutline.jpg" alt="Body" style="width:464px;height:700px; " usemap="#humanmap" >
             Additional info will pop up in new window on click
         </div>
         <map name="humanmap">
@@ -118,8 +113,28 @@
         <div id="rightside">
             <p> Additional information</p>
         </div>
-        
-        
+         
+        <script>
+            function skin()
+            {
+                document.getElementById("image").src="humanoutline.jpg";
+            }
+            
+            function muscle()
+            {
+                document.getElementById("image").src="humanoutline2.jpg";
+            }
+            
+            function organs()
+            {
+                document.getElementById("image").src="humanoutline3.jpg";
+            }
+            
+            function skeleton()
+            {
+                document.getElementById("image").src="humanoutline4.jpg";
+            }
+        </script>
     </body>
    
 </html>
