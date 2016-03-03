@@ -7,6 +7,27 @@
         <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
         <script src="hamburger.js"></script>
         <link rel="stylesheet" type="text/css" media="all" href="hamburger.css"/>
+        <script>
+            function skin()
+            {
+                document.getElementById("image").src="humanoutline.jpg";
+            }
+            
+            function muscle()
+            {
+                document.getElementById("image").src="humanoutline2.jpg";
+            }
+            
+            function organs()
+            {
+                document.getElementById("image").src="humanoutline3.jpg";
+            }
+            
+            function skeleton()
+            {
+                document.getElementById("image").src="humanoutline4.jpg";
+            }
+        </script>
     </head>
     <body>
          <style>
@@ -30,7 +51,6 @@
                  text-align:center;
                  z-index:15;
                  padding:2px;
-                 
              }
             
              #leftside
@@ -94,7 +114,7 @@
             <div id="contentLayer"></div>
             <div id="content"></div>
         </div>
-        <div id="leftside">
+        <div id="rightside">
             <p>Select Layer</p>
             <form>
                 <button class="button" onclick="skin()">Skin</button><br>
@@ -103,38 +123,15 @@
                 <button class="button" onclick="skeleton()">Skeleton</button><br>
             </form> 
         </div>
-        <div id="image">
-            <img src="humanoutline.jpg" alt="Body" style="width:464px;height:700px; " usemap="#humanmap" >
+        <div>
+            <img id="image" src="humanoutline.jpg" alt="Body" style="width:464px;height:700px; " usemap="#humanmap" >
             Additional info will pop up in new window on click
         </div>
         <map name="humanmap">
             <area shape="circle" coords="232,50,50" href="stick.png" title="the head, where the thinking do!" alt="Head">
         </map>
-        <div id="rightside">
+        <div id="leftside">
             <p> Additional information</p>
         </div>
-         
-        <script>
-            function skin()
-            {
-                document.getElementById("image").src="humanoutline.jpg";
-            }
-            
-            function muscle()
-            {
-                document.getElementById("image").src="humanoutline2.jpg";
-            }
-            
-            function organs()
-            {
-                document.getElementById("image").src="humanoutline3.jpg";
-            }
-            
-            function skeleton()
-            {
-                document.getElementById("image").src="humanoutline4.jpg";
-            }
-        </script>
     </body>
-   
 </html>
