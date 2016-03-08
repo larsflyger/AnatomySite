@@ -8,24 +8,10 @@
         <script src="hamburger.js"></script>
         <link rel="stylesheet" type="text/css" media="all" href="hamburger.css"/>
         <script>
-            function skin()
+            function changeImage(img)
             {
-                document.getElementById("image").src="humanoutline.jpg";
-            }
-            
-            function muscle()
-            {
-                document.getElementById("image").src="humanoutline2.jpg";
-            }
-            
-            function organs()
-            {
-                document.getElementById("image").src="humanoutline3.jpg";
-            }
-            
-            function skeleton()
-            {
-                document.getElementById("image").src="humanoutline4.jpg";
+                document.getElementById("image").src=img;
+                return false;
             }
         </script>
     </head>
@@ -116,12 +102,10 @@
         </div>
         <div id="rightside">
             <p>Select Layer</p>
-            <form>
-                <button class="button" onclick="skin()">Skin</button><br>
-                <button class="button" onclick="muscle()">Muscle</button><br>
-                <button class="button" onclick="organs()">Organs</button><br>
-                <button class="button" onclick="skeleton()">Skeleton</button><br>
-            </form> 
+            <button class="button" onclick="changeImage('humanoutline.jpg');">Skin</button><br>
+            <button class="button" onclick="changeImage('humanoutline2.jpg');">Muscle</button><br>
+            <button class="button" onclick="changeImage('humanoutline3.jpg');">Organs</button><br>
+            <button class="button" onclick="changeImage('humanoutline4.jpg');">Skeleton</button><br>
         </div>
         <div>
             <img id="image" src="humanoutline.jpg" alt="Body" style="width:464px;height:700px; " usemap="#humanmap" >
