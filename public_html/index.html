@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Mobile Menu Hamburger</title>
-        <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
-        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
-        <script src="hamburger.js"></script>
-        <link rel="stylesheet" type="text/css" media="all" href="hamburger.css"/>
+       <title>Medical Page</title>
+       
         <script>
-            function skin()
+            function changeImage(img)
             {
-                document.getElementById("image").src="humanoutline.jpg";
+                document.getElementById("image").src=img;
+                return false;
             }
-            
-            function muscle()
+        </script>
+        <script>
+            function changeDoc(doc)
             {
-                document.getElementById("image").src="humanoutline2.jpg";
-            }
-            
-            function organs()
-            {
-                document.getElementById("image").src="humanoutline3.jpg";
-            }
-            
-            function skeleton()
-            {
-                document.getElementById("image").src="humanoutline4.jpg";
+                document.getElementById("leftsidedoc").data=doc;
+                return false;
             }
         </script>
     </head>
     <body>
+        
          <style>
              
              .button
@@ -50,9 +40,21 @@
                  color:white;
                  text-align:center;
                  z-index:15;
-                 padding:2px;
+                 
              }
-            
+             #container
+             {
+                 background-color: green;
+                 border-radius: 4px;
+                 color: white;
+                
+                 text-align: center;
+                 text-decoration: none;
+                 display: inline-block;
+                 font-size: 16px;
+                 width: 100%;
+             }
+             
              #leftside
              {
                  width:400px;
@@ -64,6 +66,7 @@
                  outline-style:solid;
                  outline-width:1px;
                  outline-color:black;
+              
              }
                #image
              {
@@ -81,6 +84,34 @@
                  outline-width:1px;
                  outline-color:black;
              }
+            ul 
+            {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li 
+            {
+                float: left;
+            }
+
+            li a 
+            {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+
+            li a:hover 
+            {
+                background-color: #111;
+            }
              #rightside
              {
                  text-align:center;
@@ -98,40 +129,49 @@
     
         <div id="container">
             <header>
-                <div id="hamburger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <h2 style ="color: white; text-align: center">Medical Page</h2>
+                
+                <h1 style ="color: white; text-align: center">Medical Page</h1>              
+                
+                   <ul>
+                       <li> <a href="index.html">Home</a> </li>
+                       <li> <a href="Help.html">Help</a> </li>
+                       <li> <a href="About.html">About</a> </li>
+                   </ul>
+                   
+   
+                <form>
+                <h3 style="color:white; text-align: left">
+                   
+                    <font color="white"> <label for="searchbar">Search</label> </font> <br>
+                    <input type="search" id="searchbar">
+                   
+                </h3>
+                </form>
+
             </header>
-            <nav>
-                <ul>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-            <div id="contentLayer"></div>
+            
+            <div id="contentlayer"></div>
+            
             <div id="content"></div>
         </div>
         <div id="rightside">
             <p>Select Layer</p>
-            <form>
-                <button class="button" onclick="skin()">Skin</button><br>
-                <button class="button" onclick="muscle()">Muscle</button><br>
-                <button class="button" onclick="organs()">Organs</button><br>
-                <button class="button" onclick="skeleton()">Skeleton</button><br>
-            </form> 
+            <button class="button" onclick="changeImage('humanoutline.jpg');">Skin</button><br>
+            <button class="button" onclick="changeImage('humanoutline2.jpg');">Muscle</button><br>
+            <button class="button" onclick="changeImage('humanoutline3.jpg');">Organs</button><br>
+            <button class="button" onclick="changeImage('humanoutline4.jpg');">Skeleton</button><br>
         </div>
         <div>
             <img id="image" src="humanoutline.jpg" alt="Body" style="width:464px;height:700px; " usemap="#humanmap" >
-            Additional info will pop up in new window on click
+            
         </div>
         <map name="humanmap">
-            <area shape="circle" coords="232,50,50" href="stick.png" title="the head, where the thinking do!" alt="Head">
+            <area shape="circle" coords="232,50,50" href=" " onclick="changeDoc('headpdf.pdf');" title="the head, where the thinking do!" alt="Head">
         </map>
         <div id="leftside">
-            <p> Additional information</p>
+            <object id ="leftsidedoc" data="Testdocumentpdf.pdf"  type='application/pdf' width="400" height="1000">
+                
+            </object>
         </div>
     </body>
 </html>
